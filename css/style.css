@@ -5,7 +5,13 @@
     box-sizing:border-box;
 }
 
+html{
+    overflow-y:auto;
+    height:auto;
+}
+
 body{
+    min-height:100dvh;
     font-family:'Poppins',sans-serif;
     overflow-x:hidden;
     overflow-y:auto;
@@ -369,17 +375,10 @@ REASONS PAGE
 .heart-page{
     margin:0;
     padding:30px 20px;
-    min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-
+    min-height:100dvh;      /* change from 100vh */
+    display:block;          /* <-- don't use flex here */
     background:linear-gradient(135deg,#ffdde1,#ee9ca7);
-
-    font-family:'Poppins',sans-serif;
     position:relative;
-
     overflow-x:hidden;
     overflow-y:auto;
 }
@@ -388,11 +387,9 @@ REASONS PAGE
     position:relative;
     z-index:2;
     width:100%;
-
-    display:flex;
-    justify-content:center;
-
-    padding:20px 0;
+    max-width:700px;
+    margin:0 auto;
+    padding:20px 0 60px;
 }
 
 .heart-box{
