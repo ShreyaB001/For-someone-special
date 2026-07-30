@@ -26,38 +26,67 @@ document.addEventListener("DOMContentLoaded", () => {
 PASSWORD PAGE
 =========================== */
 
+let attempts = 0;
+
 function checkPassword(){
 
-    const password=document.getElementById("password");
-
-    const error=document.getElementById("error");
+    const password = document.getElementById("password");
+    const error = document.getElementById("error");
 
     if(!password) return;
 
-    if(password.value==="11042026"){
+    if(password.value === "11042026"){
 
         error.style.color="#9cffb2";
-
         error.innerHTML="❤️ I knew you'd remember...";
 
         setTimeout(()=>{
-
             window.location.href="letter.html";
-
         },1800);
+
+        return;
+    }
+
+    attempts++;
+
+    error.style.color="#ffd1d1";
+
+    if(attempts===1){
+
+        error.innerHTML="😒 Wrong! I thought you'd know this one without even thinking. Try again...";
+
+    }
+
+    else if(attempts===2){
+
+        error.innerHTML="😤 Seriously?? You're making your girlfriend wait! Think harder, Babu. ❤️";
 
     }
 
     else{
 
-        error.style.color="#ffd1d1";
+        error.innerHTML=`
+            😠 That's it! I'm officially upset.<br><br>
+            You forgot our special date... 😭<br><br>
 
-        error.innerHTML="❌ Hmm... I think you'd remember this special day. Try again ❤️";
-
-        password.value="";
+            <a href="tel:+91XXXXXXXXXX">
+                <button style="
+                    margin-top:15px;
+                    background:#ff4f8b;
+                    color:white;
+                    border:none;
+                    padding:12px 28px;
+                    border-radius:40px;
+                    cursor:pointer;
+                ">
+                    📞 Call Me Right Now
+                </button>
+            </a>
+        `;
 
     }
 
+    password.value="";
 }
 // ===============================
 // HEART PAGE
