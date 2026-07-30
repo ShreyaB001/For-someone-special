@@ -59,7 +59,7 @@ function checkPassword(){
 
     else if(attempts===2){
 
-        error.innerHTML="😤 Seriously?? You're making your girlfriend wait! Think harder, Babu. ❤️";
+        error.innerHTML="😤 Seriously?? You're making your girlfriend wait! Think twice, Babu. ❤️";
 
     }
 
@@ -69,7 +69,7 @@ function checkPassword(){
             😠 That's it! I'm officially upset.<br><br>
             You forgot our special date... 😭<br><br>
 
-            <a href="tel:+91XXXXXXXXXX">
+            <a href="tel:+919002123257">
                 <button style="
                     margin-top:15px;
                     background:#ff4f8b;
